@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Valentine's Day Confession for Best Friends</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: red;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    #confession {
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px solid red;
+        max-width: 300px;
+        white-space: pre-wrap;
+    }
+</style>
+</head>
+<body>
+
+<div id="confession"></div>
+
+<script>
+    var confessionText = `Dear Best Friends,
+
+As Valentine's Day dawns,
+I want to share my love and appreciation
+for each and every one of you.
+
+You're the stars that light up my darkest nights,
+the laughter that fills my days with joy,
+and the shoulders I lean on when times get tough.
+
+Our friendship is a treasure beyond measure,
+a bond that grows stronger with each passing day.
+
+So here's to us, my dear friends,
+united by love, laughter, and endless memories.
+
+Happy Valentine's Day!
+
+With all my love,
+
+Your Awesome Buddy: FranssVin`;
+
+    var index = 0;
+    var confessionLabel = document.getElementById("confession");
+
+    function animateConfession() {
+        if (index < confessionText.length) {
+            confessionLabel.textContent += confessionText[index];
+            index++;
+            setTimeout(animateConfession, 50);
+        }
+    }
+
+    animateConfession();
+</script>
+
+</body>
+</html>
